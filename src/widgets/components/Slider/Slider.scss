@@ -48,3 +48,28 @@
   object-fit: cover;
   border-radius: 20px;
 }
+
+.arrow-next,
+.arrow-prev {
+  z-index: 1;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow-next {
+  right: 0;
+
+  transform: translateX(-20vw);
+
+  &:active {
+    transform: translateX(-20vw) scale(0.9);
+  }
+}
+.arrow-prev {
+  left: 0;
+  transform: translateX(20vw);
+
+  &:active {
+    transform: translateX(20vw) scale(0.9);
+  }
+}
