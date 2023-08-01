@@ -7,7 +7,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  // background: #fff;
 
   /* Center slide text vertically */
   display: flex;
@@ -30,7 +30,7 @@
     bottom: 0;
     background: rgba($color: #000000, $alpha: 0.7);
     transition: all 0.5s ease-in-out;
-    border-radius: 15px;
+    border-radius: 20px;
     pointer-events: none;
   }
 
@@ -51,6 +51,15 @@
 }
 
 .swiper-slide iframe {
+  display: block;
+  width: 100%;
+  // height: 100%;
+  height: calc(16 / 9 * 30.7vh);
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.swiper-slide video {
   display: block;
   width: 100%;
   // height: 100%;
