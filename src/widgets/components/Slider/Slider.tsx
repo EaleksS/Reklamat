@@ -32,6 +32,7 @@ export const Slider: FC = (): JSX.Element => {
 
   // video
   const [isActive, setIsActive] = useState<boolean>(false);
+  console.log(isActive);
 
   // const [volume, setVolume] = useState<number>(0.8);
   // const [muted, setMuted] = useState<boolean>(false);
