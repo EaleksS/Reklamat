@@ -195,7 +195,7 @@
   0% {
     transform: translateY(0) scale(0);
     opacity: 1;
-    border-radius: 50%;
+    border-radius: 0%;
   }
 
   100% {
