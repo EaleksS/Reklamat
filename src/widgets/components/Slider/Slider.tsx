@@ -9,6 +9,7 @@ import "./Slider.scss";
 // import required modules
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
+import ReactPlayer from "react-player";
 SwiperCore.use([Navigation]);
 
 export const Slider: FC = (): JSX.Element => {
@@ -43,7 +44,15 @@ export const Slider: FC = (): JSX.Element => {
             key={e}
             className={activeIndex === index ? "active" : ""}
           >
-            <img src="/slide1.png" alt="slider" />
+            {/* <img src="/slide1.png" alt="slider" /> */}
+            <ReactPlayer
+              className="iframe"
+              width="100%"
+              height="100%"
+              controls
+              loop={true}
+              url={"https://www.youtube.com/watch?v=L2SeR_ggu4Y"}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

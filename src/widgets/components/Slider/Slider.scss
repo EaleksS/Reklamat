@@ -31,6 +31,7 @@
     background: rgba($color: #000000, $alpha: 0.7);
     transition: all 0.5s ease-in-out;
     border-radius: 15px;
+    pointer-events: none;
   }
 
   &.active {
@@ -45,6 +46,15 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.swiper-slide iframe {
+  display: block;
+  width: 100%;
+  // height: 100%;
+  height: calc(16 / 9 * 30.7vh);
   object-fit: cover;
   border-radius: 20px;
 }
