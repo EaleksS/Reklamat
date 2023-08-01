@@ -1,0 +1,50 @@
+@import "/src/app/styles/variables";
+
+.header {
+  background: rgba($color: #3b0f52, $alpha: 0.4);
+  /* Blur */
+  backdrop-filter: blur(30px);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #fff;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(113, 65, 135, 0.6018941756390056) 100%
+    );
+  }
+
+  .content {
+    max-width: $max-width;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+
+    h2 {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}

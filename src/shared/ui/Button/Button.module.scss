@@ -1,0 +1,122 @@
+@import "/src/app/styles/variables";
+
+.btn {
+  height: 2rem;
+  //   border: 0;
+  font-weight: 500;
+  font-size: 1rem;
+
+  font-family: "Fira Code", monospace;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 16px;
+
+  transition: all 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.circle {
+  height: 76px;
+  width: 76px;
+  background: #8747c9;
+  border: 3.257px solid rgba(38, 6, 53, 0.6);
+  background: #8747c9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+
+  // background: #8747C9;
+  box-shadow: 0px 4.342857360839844px 7.600000381469727px 0px
+      rgba(186, 120, 254, 0.6) inset,
+    0px -14.114286422729492px 11.175102233886719px -4.063673973083496px
+      rgba(79, 29, 116, 0.8) inset;
+
+  color: #380e63;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.16px;
+  text-transform: capitalize;
+
+  // @media (min-width: 800px) {
+  //   &:hover {
+  //     background-color: rgba($color: $primary, $alpha: 0.2);
+  //   }
+  // }
+}
+
+.bigCircle {
+  width: 131px;
+  height: 131px;
+  background: #ffc83a;
+  border: 3.257px solid rgba($color: #ffc83a, $alpha: 0.1);
+  background: #ffc83a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  // background: #8747C9;
+  box-shadow: 0px 14.971428871154785px 32.75px 0px #ffe895 inset,
+    0px -18.71428680419922px 10.29285717010498px -3.7428572177886963px
+      rgba(224, 135, 0, 0.6) inset;
+
+  color: #6f4a02;
+  font-size: 27.579px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.276px;
+  text-transform: capitalize;
+
+  position: relative;
+
+  // @media (min-width: 800px) {
+  //   &:hover {
+  //     background-color: rgba($color: $primary, $alpha: 0.2);
+  //   }
+  // }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("/arrowbg2.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    background-size: cover;
+    opacity: 0.7;
+  }
+}
+
+.help {
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 200, 58, 0.15);
+  background: linear-gradient(
+    180deg,
+    rgba(135, 116, 65, 0.3) 0%,
+    rgba(135, 116, 65, 0.12) 100%
+  );
+
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  color: #ffc83a;
+  font-weight: bold;
+}

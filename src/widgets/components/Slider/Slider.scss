@@ -1,0 +1,49 @@
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+
+  position: relative;
+
+  transform: scale(0.8) !important;
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.7);
+    transition: all 0.5s ease-in-out;
+    border-radius: 15px;
+  }
+
+  &.active {
+    transform: scale(1) !important;
+    &::after {
+      background: rgba($color: #000000, $alpha: 0);
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
