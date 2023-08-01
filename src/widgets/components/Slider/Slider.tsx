@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, Ref, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -13,12 +13,13 @@ import ReactPlayer from "react-player";
 SwiperCore.use([Navigation]);
 
 export const Slider: FC = (): JSX.Element => {
+  // slider
   const [activeIndex, setActiveIndex] = useState<number>(0);
   console.log(activeIndex);
 
   const [swiper, setSwiper] = useState<SwiperCore>();
-  const [prevActive, setPrevActive] = useState(true);
-  const [nextActive, setNextActive] = useState(false);
+  const [prevActive, setPrevActive] = useState<boolean>(true);
+  const [nextActive, setNextActive] = useState<boolean>(false);
 
   const isActice = () => {
     setPrevActive(1 === Number(swiper && swiper?.activeIndex + 1));
@@ -27,6 +28,37 @@ export const Slider: FC = (): JSX.Element => {
         Number(swiper && swiper?.activeIndex + 1)
     );
   };
+  // /slider
+
+  // video
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  // const [volume, setVolume] = useState<number>(0.8);
+  // const [muted, setMuted] = useState<boolean>(false);
+
+  const player = useRef(null);
+
+  // const onReady = () => {
+  //   if (!player) return;
+  //   if (!player.current) return;
+
+  //   const internalPlayer = player.current.getInternalPlayer();
+  //   internalPlayer.addEventListener(
+  //     "volumechange",
+  //     function () {
+  //       setVolume(internalPlayer.volume);
+  //       if (internalPlayer.muted) {
+  //         setMuted(true);
+  //       } else {
+  //         setMuted(false);
+  //         setVolume(internalPlayer.volume);
+  //       }
+  //     },
+  //     false
+  //   );
+  // };
+
+  // /video
 
   return (
     <>
@@ -49,8 +81,12 @@ export const Slider: FC = (): JSX.Element => {
               className="iframe"
               width="100%"
               height="100%"
+              playing={activeIndex === index ? true : false}
               controls
+              ref={player}
               loop={true}
+              onPlay={() => setIsActive(true)}
+              onPause={() => setIsActive(false)}
               url={"https://www.youtube.com/watch?v=L2SeR_ggu4Y"}
             />
           </SwiperSlide>
