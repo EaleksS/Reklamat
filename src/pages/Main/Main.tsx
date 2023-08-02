@@ -1,13 +1,14 @@
 import { FC } from "react";
-import { Layout, Slider } from "../../widgets";
+import { Layout, Slots } from "../../widgets";
 
 export const Main: FC = (): JSX.Element => {
   return (
     <Layout>
       <div style={{ display: "flex", alignItems: "center", height: "80vh" }}>
-        <Slider />
+        {/* <Slider /> */}
+        <Slots />
       </div>
-      <div className="background">
+      {/* <div className="background">
         <div className="cube"></div>
         <div className="cube"></div>
         <div className="cube"></div>
@@ -40,7 +41,7 @@ export const Main: FC = (): JSX.Element => {
       </div>
       <div className="bg"></div>
       <div className="bg bg2"></div>
-      <div className="bg bg3"></div>
+      <div className="bg bg3"></div> */}
     </Layout>
   );
 };

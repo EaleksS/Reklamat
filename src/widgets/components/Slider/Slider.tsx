@@ -81,7 +81,7 @@ export const Slider: FC = (): JSX.Element => {
 
   // /video
 
-  const { begin, setBegin } = useStore();
+  const { setBegin } = useStore();
 
   return (
     <>
@@ -90,8 +90,10 @@ export const Slider: FC = (): JSX.Element => {
         spaceBetween={50}
         centeredSlides={true}
         onActiveIndexChange={(e) => setActiveIndex(e.realIndex)}
-        modules={[Navigation]}
+        // modules={[Navigation]}
         onSwiper={(e) => setSwiper(e)}
+        // loop={true}
+        // loopedSlides={1}
         onSlideChange={() => {
           isActice();
           setBegin(false);
@@ -107,7 +109,7 @@ export const Slider: FC = (): JSX.Element => {
               className="iframe"
               width="100%"
               height="100%"
-              playing={activeIndex === index ? begin : false}
+              playing={activeIndex === index ? true : false}
               controls={false}
               ref={player}
               loop={true}

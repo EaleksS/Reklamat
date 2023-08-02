@@ -1,0 +1,66 @@
+.slots {
+  width: 1000px;
+  margin: 0 auto;
+  //   padding: 40px 0;
+  border-radius: 20px;
+  background: radial-gradient(
+    60.54% 60.37% at 50.05% 50.09%,
+    rgba(46, 7, 69, 0.65) 26.87%,
+    rgba(21, 0, 32, 0.65) 100%
+  );
+  /* Blur */
+  backdrop-filter: blur(30px);
+  box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
+  display: flex;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    border: 3px solid #ffc83a;
+    // background: rgba($color: red, $alpha: 0.2);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 200, 58, 0.15) 0%,
+      rgba(255, 200, 58, 0) 100%
+    );
+    border-radius: 20px;
+    z-index: 2;
+  }
+}
+
+.noborder {
+  &::after {
+    border-right: 0 solid rgba(255, 255, 255, 0) !important;
+  }
+}
+
+.mySwiper {
+  height: 500px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 0;
+    width: 3px;
+    border-right: 3px solid rgba(255, 255, 255, 0.1);
+  }
+
+  div {
+    &::after {
+      background: transparent;
+    }
+  }
+}
+
+.frame {
+  width: 150px !important;
+  height: 150px !important;
+}
