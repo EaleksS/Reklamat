@@ -3,10 +3,11 @@ import styles from "./Footer.module.scss";
 import { Card } from "../../../entities";
 import { AiFillEye } from "react-icons/ai";
 import { Button } from "../../../shared";
-import { useStore } from "../../../store/store";
+import { useBegin, useStore } from "../../../store/store";
 
 export const Footer: FC = (): JSX.Element => {
-  const { setBegin, setViews, views } = useStore();
+  const { setViews, views } = useStore();
+  const { setBegin } = useBegin();
 
   return (
     <footer className={styles.footer}>

@@ -10,7 +10,7 @@ import "./Slider.scss";
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
 import ReactPlayer from "react-player";
-import { useStore } from "../../../store/store";
+import { useBegin } from "../../../store/store";
 SwiperCore.use([Navigation]);
 
 interface IVideo {
@@ -81,7 +81,7 @@ export const Slider: FC = (): JSX.Element => {
 
   // /video
 
-  const { setBegin } = useStore();
+  const { begin } = useBegin();
 
   return (
     <>
@@ -94,9 +94,9 @@ export const Slider: FC = (): JSX.Element => {
         onSwiper={(e) => setSwiper(e)}
         // loop={true}
         // loopedSlides={1}
+        className={`slider-container ${begin && "noActive"}`}
         onSlideChange={() => {
           isActice();
-          setBegin(false);
         }}
       >
         {video.map((e, index) => (
@@ -120,14 +120,20 @@ export const Slider: FC = (): JSX.Element => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="arrow-next" onClick={() => swiper && swiper.slideNext()}>
+      <div
+        className={`arrow-next ${begin && "noActive"}`}
+        onClick={() => swiper && swiper.slideNext()}
+      >
         <img
           src="/arrownext.svg"
           alt="next"
           style={nextActive ? { opacity: 0.5 } : {}}
         />
       </div>
-      <div className="arrow-prev" onClick={() => swiper && swiper.slidePrev()}>
+      <div
+        className={`arrow-prev ${begin && "noActive"}`}
+        onClick={() => swiper && swiper.slidePrev()}
+      >
         <img
           src="/arrowprev.svg"
           alt="next"

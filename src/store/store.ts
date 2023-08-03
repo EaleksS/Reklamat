@@ -1,11 +1,16 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { devtools, persist } from "zustand/middleware";
 
 type useStore = {
   views: number;
   setViews: (view: number) => void;
   balance: number;
   setBalance: (cent: number) => void;
+  begin: boolean;
+  setBegin: (bool: boolean) => void;
+};
+
+type useBegin = {
   begin: boolean;
   setBegin: (bool: boolean) => void;
 };
@@ -28,4 +33,13 @@ export const useStore = create(
     }),
     { name: "store" }
   )
+);
+
+export const useBegin = create(
+  devtools<useBegin>((set) => ({
+    begin: false,
+    setBegin: (bool) => {
+      set({ begin: bool });
+    },
+  }))
 );

@@ -1,12 +1,12 @@
 import { FC } from "react";
-import { Layout, Slots } from "../../widgets";
+import { Layout, Slots, Slider } from "../../widgets";
 
 export const Main: FC = (): JSX.Element => {
   return (
     <Layout>
       <div style={{ display: "flex", alignItems: "center", height: "80vh" }}>
-        {/* <Slider /> */}
         <Slots />
+        <Slider />
       </div>
       {/* <div className="background">
         <div className="cube"></div>
