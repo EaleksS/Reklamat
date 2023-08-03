@@ -49,12 +49,14 @@ export const Slots: FC = (): JSX.Element => {
           />,
         ]}
         value={[
-          <img
-            className={styles.item}
-            style={{ width: "300px" }}
-            src="/slide1.png"
-            alt=""
-          />,
+          <div className={styles.dubleslide}>
+            <img
+              className={styles.item}
+              style={{ width: "300px" }}
+              src="/slide1.png"
+              alt=""
+            />
+          </div>,
         ]}
         dummyCharacters={[
           <img
@@ -111,6 +113,10 @@ export const Slots: FC = (): JSX.Element => {
           <div className={styles.numbers}>
             <img className={styles.item} src="/Frame-1.png" alt="" />
             <h3>{new Intl.NumberFormat("en").format(views)}</h3>
+            <div className={styles.numbers2}>
+              <img className={styles.item} src="/Frame.png" alt="" />
+              <h3>{randomNumber()}</h3>
+            </div>
           </div>,
         ]}
         dummyCharacters={[
@@ -157,8 +163,11 @@ export const Slots: FC = (): JSX.Element => {
         ]}
         value={[
           <div className={styles.numbers}>
-            <img className={styles.item} src="/Frame-1.png" alt="" />
-            <h3>{views}</h3>
+            <img className={styles.item} src="/Frame-2.png" alt="" />
+            <h3>{views}</h3><div className={styles.numbers2}>
+              <img className={styles.item} src="/Frame-1.png" alt="" />
+              <h3>{randomNumber()}</h3>
+            </div>
           </div>,
         ]}
         dummyCharacters={[
@@ -204,8 +213,11 @@ export const Slots: FC = (): JSX.Element => {
         ]}
         value={[
           <div className={styles.numbers}>
-            <img className={styles.item} src="/Frame-1.png" alt="" />
-            <h3>{views}</h3>
+            <img className={styles.item} src="/Frame.png" alt="" />
+            <h3>{views}</h3><div className={styles.numbers2}>
+              <img className={styles.item} src="/Frame-2.png" alt="" />
+              <h3>{randomNumber()}</h3>
+            </div>
           </div>,
         ]}
         dummyCharacters={[
