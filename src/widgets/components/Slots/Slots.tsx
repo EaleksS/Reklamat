@@ -9,7 +9,7 @@ export const Slots: FC = (): JSX.Element => {
   const counterRef3 = useRef<SlotCounterRef>(null);
   const counterRef4 = useRef<SlotCounterRef>(null);
 
-  const { begin, setBegin } = useStore();
+  const { begin, setBegin, views } = useStore();
 
   useEffect(() => {
     if (begin) {
@@ -21,6 +21,12 @@ export const Slots: FC = (): JSX.Element => {
       setBegin(false);
     }
   }, [begin]);
+
+  const randomNumber = () => {
+    return new Intl.NumberFormat("en").format(
+      Math.round(Math.random() * 100000)
+    );
+  };
 
   return (
     <div className={styles.slots}>
@@ -37,18 +43,50 @@ export const Slots: FC = (): JSX.Element => {
         startValue={[
           <img
             className={styles.item}
-            style={{ transform: "translateY(-70px)" }}
+            style={{ transform: "translateY(-70px)", width: "300px" }}
             src="/slide1.png"
             alt=""
           />,
         ]}
-        value={[<img className={styles.item} src="/slide1.png" alt="" />]}
+        value={[
+          <img
+            className={styles.item}
+            style={{ width: "300px" }}
+            src="/slide1.png"
+            alt=""
+          />,
+        ]}
         dummyCharacters={[
-          <img className={styles.item} src="/slide1.png" alt="" />,
-          <img className={styles.item} src="/slide1.png" alt="" />,
-          <img className={styles.item} src="/slide1.png" alt="" />,
-          <img className={styles.item} src="/slide1.png" alt="" />,
-          <img className={styles.item} src="/slide1.png" alt="" />,
+          <img
+            className={styles.item}
+            style={{ width: "300px" }}
+            src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000"
+            alt=""
+          />,
+          <img
+            className={styles.item}
+            style={{ width: "300px" }}
+            src="https://img.freepik.com/premium-photo/luxurious-floral-elements-botanical-background-or-wallpaper-design-prints-3d-render_717906-525.jpg?w=2000"
+            alt=""
+          />,
+          <img
+            className={styles.item}
+            style={{ width: "300px" }}
+            src="https://i.redd.it/lsknlqcnihza1.jpg"
+            alt=""
+          />,
+          <img
+            className={styles.item}
+            style={{ width: "300px" }}
+            src="https://i.pinimg.com/originals/ab/85/bf/ab85bffa87c5a40419b7e03f0ec7b8e0.jpg"
+            alt=""
+          />,
+          <img
+            className={styles.item}
+            style={{ width: "300px" }}
+            src="https://marketplace.canva.com/EAFHm4JWsu8/1/0/1600w/canva-pink-landscape-desktop-wallpaper-HGxdJA_xIx0.jpg"
+            alt=""
+          />,
         ]}
       />
       <SlotCounter
@@ -57,22 +95,45 @@ export const Slots: FC = (): JSX.Element => {
         charClassName={styles.char}
         valueClassName={styles.value}
         separatorClassName={styles.separ}
-        duration={2}
+        duration={2.5}
         startValue={[
-          <img
-            className={styles.item}
-            style={{ transform: "translateY(-70px)" }}
-            src="/Frame.png"
-            alt=""
-          />,
+          <div className={styles.numbers}>
+            <img
+              className={styles.item}
+              style={{ transform: "translateY(-70px)" }}
+              src="/Frame.png"
+              alt=""
+            />
+            <h3>{randomNumber()}</h3>
+          </div>,
         ]}
-        value={[<img className={styles.item} src="/Frame.png" alt="" />]}
+        value={[
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{new Intl.NumberFormat("en").format(views)}</h3>
+          </div>,
+        ]}
         dummyCharacters={[
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-2.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-2.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
         ]}
       />
       <SlotCounter
@@ -81,23 +142,46 @@ export const Slots: FC = (): JSX.Element => {
         charClassName={styles.char}
         valueClassName={styles.value}
         separatorClassName={styles.separ}
-        duration={2}
+        duration={3}
         // sequentialAnimationMode
         startValue={[
-          <img
-            className={styles.item}
-            style={{ transform: "translateY(-70px)" }}
-            src="/Frame.png"
-            alt=""
-          />,
+          <div className={styles.numbers}>
+            <img
+              className={styles.item}
+              style={{ transform: "translateY(-70px)" }}
+              src="/Frame.png"
+              alt=""
+            />
+            <h3>{randomNumber()}</h3>
+          </div>,
         ]}
-        value={[<img className={styles.item} src="/Frame.png" alt="" />]}
+        value={[
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{views}</h3>
+          </div>,
+        ]}
         dummyCharacters={[
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-2.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-2.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
         ]}
       />
       <SlotCounter
@@ -106,22 +190,45 @@ export const Slots: FC = (): JSX.Element => {
         charClassName={styles.char}
         valueClassName={styles.value}
         separatorClassName={styles.separ}
-        duration={2}
+        duration={3.5}
         startValue={[
-          <img
-            className={styles.item}
-            style={{ transform: "translateY(-70px)" }}
-            src="/Frame.png"
-            alt=""
-          />,
+          <div className={styles.numbers}>
+            <img
+              className={styles.item}
+              style={{ transform: "translateY(-70px)" }}
+              src="/Frame.png"
+              alt=""
+            />
+            <h3>{randomNumber()}</h3>
+          </div>,
         ]}
-        value={[<img className={styles.item} src="/Frame.png" alt="" />]}
+        value={[
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{views}</h3>
+          </div>,
+        ]}
         dummyCharacters={[
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
-          <img className={styles.item} src="/Frame.png" alt="" />,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-2.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-1.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
+          <div className={styles.numbers}>
+            <img className={styles.item} src="/Frame-2.png" alt="" />
+            <h3>{randomNumber()}</h3>
+          </div>,
         ]}
       />
     </div>
