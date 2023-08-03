@@ -3,9 +3,12 @@
   opacity: 1;
   transition: all 0.5s ease-in-out;
 
+  pointer-events: all;
+
   &.noActive {
     opacity: 0;
     transform: scale(0);
+    pointer-events: none;
   }
 }
 
@@ -88,10 +91,12 @@
   transform: scale(1);
   opacity: 1;
   transition: all 0.5s ease-in-out;
+  pointer-events: all;
 
   &.noActive {
     opacity: 0;
     transform: scale(0);
+    pointer-events: none;
   }
 }
 
