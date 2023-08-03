@@ -109,7 +109,7 @@ export const Slider: FC = (): JSX.Element => {
               className="iframe"
               width="100%"
               height="100%"
-              playing={activeIndex === index ? true : false}
+              playing={begin ? false : activeIndex === index ? true : false}
               controls={false}
               ref={player}
               loop={true}
