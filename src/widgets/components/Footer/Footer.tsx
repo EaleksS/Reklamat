@@ -7,10 +7,10 @@ import { useBegin, useStore } from "../../../store/store";
 
 export const Footer: FC = (): JSX.Element => {
   const { setViews, views } = useStore();
-  const { setBegin } = useBegin();
+  const { setBegin, begin } = useBegin();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${begin && styles.noActive}`}>
       <div className={styles.content}>
         <Card
           icon={<AiFillEye size={20} />}
