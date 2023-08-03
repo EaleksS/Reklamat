@@ -17,6 +17,46 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.slot-machine {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.reels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+.reels div {
+  font-size: 40px;
+}
+
+.spinning {
+  animation: spin 2s linear infinite;
+}
+
+.spin-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.spin-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .area {
   width: 100%;
 }

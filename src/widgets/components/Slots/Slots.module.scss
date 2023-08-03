@@ -1,5 +1,4 @@
 .slots {
-  width: 1000px;
   margin: 0 auto;
   //   padding: 40px 0;
   border-radius: 20px;
@@ -12,15 +11,18 @@
   backdrop-filter: blur(30px);
   box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
   display: flex;
+  justify-content: space-between;
   position: relative;
+
+  overflow: hidden;
 
   &::after {
     content: "";
     position: absolute;
-    top: 30%;
+    top: 33%;
     left: 0;
     right: 0;
-    bottom: 30%;
+    bottom: 33%;
     border: 3px solid #ffc83a;
     // background: rgba($color: red, $alpha: 0.2);
     background: linear-gradient(
@@ -61,6 +63,90 @@
 }
 
 .frame {
-  width: 150px !important;
-  height: 150px !important;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.slot {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  // overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+
+  transition: top 0.2s ease-in-out;
+  top: 0;
+
+  &:hover {
+    top: 100px;
+  }
+
+  div {
+    // height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding: 18px 0;
+    margin: 17px 0;
+    // background: #000;
+  }
+}
+
+.slots2 {
+  // width: 1000px;
+  // height: 400px;
+  margin: 0 auto;
+  //   padding: 40px 0;
+  border-radius: 20px;
+  background: radial-gradient(
+    60.54% 60.37% at 50.05% 50.09%,
+    rgba(46, 7, 69, 0.65) 26.87%,
+    rgba(21, 0, 32, 0.65) 100%
+  );
+  /* Blur */
+  backdrop-filter: blur(30px);
+  box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.item {
+  height: 200px;
+  width: 100%;
+  padding: 30px;
+}
+
+.itemw {
+  height: 200px;
+  width: 150px;
+  padding: 20px;
+}
+
+.cont {
+  height: 600px !important;
+  // transform: translateY(-800px) !important;
+
+  div {
+    div {
+      // transform: translateY(-800px);
+    }
+  }
+}
+
+.char {
+  height: 600px !important;
+}
+
+.value {
+  height: 121.5px !important;
+}
+
+.separ {
 }
