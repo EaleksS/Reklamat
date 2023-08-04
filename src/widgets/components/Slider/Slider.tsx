@@ -37,7 +37,6 @@ const video: IVideo[] = [
 export const Slider: FC = (): JSX.Element => {
   // slider
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  console.log(activeIndex);
 
   const [swiper, setSwiper] = useState<SwiperCore>();
   const [prevActive, setPrevActive] = useState<boolean>(true);
@@ -116,8 +115,11 @@ export const Slider: FC = (): JSX.Element => {
               // loop={true}
               // onPlay={() => setIsActive(true)}
               // onPause={() => setIsActive(false)}
-              light={<img src="/slide1.png" alt="light" />}
-              fallback={<Loader />}
+              fallback={
+                <div className="loaderPlayer">
+                  <Loader />
+                </div>
+              }
               url={e.url}
             />
           </SwiperSlide>
