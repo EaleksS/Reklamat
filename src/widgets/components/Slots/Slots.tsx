@@ -42,6 +42,7 @@ export const Slots: FC = (): JSX.Element => {
           autoAnimationStart={false}
           // startValueOnce
           // sequentialAnimationMode
+          direction="top-down"
           animateUnchanged
           startValue={[
             <img
@@ -101,6 +102,7 @@ export const Slots: FC = (): JSX.Element => {
           valueClassName={styles.value}
           separatorClassName={styles.separ}
           duration={2.5}
+          direction="top-down"
           autoAnimationStart={false}
           startValue={[
             <div className={styles.numbers}>
@@ -151,6 +153,7 @@ export const Slots: FC = (): JSX.Element => {
           containerClassName={styles.cont}
           charClassName={styles.char}
           valueClassName={styles.value}
+          direction="top-down"
           separatorClassName={styles.separ}
           duration={3}
           autoAnimationStart={false}
@@ -204,6 +207,7 @@ export const Slots: FC = (): JSX.Element => {
           containerClassName={`${styles.cont} ${styles.noborder}`}
           charClassName={styles.char}
           valueClassName={styles.value}
+          direction="top-down"
           separatorClassName={styles.separ}
           autoAnimationStart={false}
           duration={3.5}
