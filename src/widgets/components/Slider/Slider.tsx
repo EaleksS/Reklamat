@@ -9,7 +9,7 @@ import "./Slider.scss";
 // import required modules
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player";
 import { useBegin } from "../../../store/store";
 import { Loader } from "../../../shared";
 SwiperCore.use([Navigation]);

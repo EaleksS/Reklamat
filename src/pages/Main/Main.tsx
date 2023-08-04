@@ -5,8 +5,8 @@ export const Main: FC = (): JSX.Element => {
   return (
     <Layout>
       <div style={{ display: "flex", alignItems: "center", height: "80vh" }}>
-        <Slider />
         <Slots />
+        <Slider />
       </div>
       {/* <div className="background">
         <div className="cube"></div>
