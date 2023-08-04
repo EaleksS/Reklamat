@@ -14,7 +14,6 @@
 
 .swiper {
   width: 100%;
-  // height: 500px;
   max-height: calc(16 / 9 * 100vh);
 }
 
@@ -22,13 +21,11 @@
   text-align: center;
   font-size: 18px;
   // background: #fff;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000;
-
   position: relative;
 
   transform: scale(0.8) !important;
@@ -42,7 +39,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba($color: #000000, $alpha: 0.7);
+    // background: rgba($color: #000000, $alpha: 0.7);
     transition: all 0.5s ease-in-out;
     border-radius: 20px;
     pointer-events: none;
@@ -51,7 +48,7 @@
   &.active {
     transform: scale(1) !important;
     &::after {
-      background: rgba($color: #000000, $alpha: 0);
+      // background: rgba($color: #000000, $alpha: 0);
     }
   }
 }

@@ -9,9 +9,9 @@ import "./Slider.scss";
 // import required modules
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
-import ReactPlayer from "react-player";
 import { useBegin } from "../../../store/store";
 import { Loader } from "../../../shared";
+import FilePlayer from "react-player/file";
 SwiperCore.use([Navigation]);
 
 interface IVideo {
@@ -74,10 +74,12 @@ export const Slider: FC = (): JSX.Element => {
             className={activeIndex === index ? "active" : ""}
           >
             {/* <img src="/slide1.png" alt="slider" /> */}
-            <ReactPlayer
+            <FilePlayer
               className="iframe"
-              width="560"
-              height="315"
+              width="800px"
+              // height="472.5"
+              // width="100%"
+              height="100%"
               playing={begin ? false : activeIndex === index ? true : false}
               controls={false}
               // loop={true}
