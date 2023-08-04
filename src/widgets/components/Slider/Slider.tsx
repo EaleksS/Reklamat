@@ -22,15 +22,15 @@ interface IVideo {
 const video: IVideo[] = [
   {
     id: 1,
-    url: "https://www.youtube.com/watch?v=oFgvzyJypk4",
+    url: "/video/video_1.mp4",
   },
   {
     id: 2,
-    url: "https://www.youtube.com/watch?v=h50FdnpOxZA",
+    url: "/video/video_2.mp4",
   },
   {
     id: 3,
-    url: "https://www.youtube.com/watch?v=zsg9MfSitXk",
+    url: "/video/video_3.mp4",
   },
 ];
 
