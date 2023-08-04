@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from "react";
+import { FC, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -49,37 +49,6 @@ export const Slider: FC = (): JSX.Element => {
         Number(swiper && swiper?.activeIndex + 1)
     );
   };
-  // /slider
-
-  // video
-  // const [isActive, setIsActive] = useState<boolean>(false);
-
-  // const [volume, setVolume] = useState<number>(0.8);
-  // const [muted, setMuted] = useState<boolean>(false);
-
-  const player = useRef(null);
-
-  // const onReady = () => {
-  //   if (!player) return;
-  //   if (!player.current) return;
-
-  //   const internalPlayer = player.current.getInternalPlayer();
-  //   internalPlayer.addEventListener(
-  //     "volumechange",
-  //     function () {
-  //       setVolume(internalPlayer.volume);
-  //       if (internalPlayer.muted) {
-  //         setMuted(true);
-  //       } else {
-  //         setMuted(false);
-  //         setVolume(internalPlayer.volume);
-  //       }
-  //     },
-  //     false
-  //   );
-  // };
-
-  // /video
 
   const { begin } = useBegin();
 
@@ -107,11 +76,10 @@ export const Slider: FC = (): JSX.Element => {
             {/* <img src="/slide1.png" alt="slider" /> */}
             <ReactPlayer
               className="iframe"
-              width="100%"
-              height="100%"
+              width="560"
+              height="315"
               playing={begin ? false : activeIndex === index ? true : false}
               controls={false}
-              ref={player}
               // loop={true}
               // onPlay={() => setIsActive(true)}
               // onPause={() => setIsActive(false)}
