@@ -9,7 +9,7 @@ export const Slots: FC = (): JSX.Element => {
   const counterRef3 = useRef<SlotCounterRef>(null);
   const counterRef4 = useRef<SlotCounterRef>(null);
 
-  const { views } = useStore();
+  const { views, balance } = useStore();
   const { begin } = useBegin();
 
   useEffect(() => {
@@ -21,11 +21,11 @@ export const Slots: FC = (): JSX.Element => {
     }
   }, [begin]);
 
-  const randomNumber = () => {
-    return new Intl.NumberFormat("en").format(
-      Math.round(Math.random() * 100000)
-    );
-  };
+  // const randomNumber = () => {
+  //   return new Intl.NumberFormat("en").format(
+  //     Math.round(Math.random() * 100000)
+  //   );
+  // };
 
   return (
     <div className={`${styles.slots} ${begin && styles.active}`}>
@@ -106,7 +106,7 @@ export const Slots: FC = (): JSX.Element => {
                 src="/Frame.png"
                 alt=""
               />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
           ]}
           value={[
@@ -115,30 +115,30 @@ export const Slots: FC = (): JSX.Element => {
               <h3>{new Intl.NumberFormat("en").format(views)}</h3>
               <div className={styles.numbers2}>
                 <img className={styles.item} src="/Frame.png" alt="" />
-                <h3>{randomNumber()}</h3>
+                <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
               </div>
             </div>,
           ]}
           dummyCharacters={[
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-1.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-2.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-1.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-2.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
           ]}
         />
@@ -158,7 +158,7 @@ export const Slots: FC = (): JSX.Element => {
                 src="/Frame.png"
                 alt=""
               />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
           ]}
           value={[
@@ -167,30 +167,30 @@ export const Slots: FC = (): JSX.Element => {
               <h3>{views}</h3>
               <div className={styles.numbers2}>
                 <img className={styles.item} src="/Frame-1.png" alt="" />
-                <h3>{randomNumber()}</h3>
+                <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
               </div>
             </div>,
           ]}
           dummyCharacters={[
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-1.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-2.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-1.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-2.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
           ]}
         />
@@ -209,7 +209,7 @@ export const Slots: FC = (): JSX.Element => {
                 src="/Frame.png"
                 alt=""
               />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
           ]}
           value={[
@@ -218,30 +218,30 @@ export const Slots: FC = (): JSX.Element => {
               <h3>{views}</h3>
               <div className={styles.numbers2}>
                 <img className={styles.item} src="/Frame-2.png" alt="" />
-                <h3>{randomNumber()}</h3>
+                <h3>{new Intl.NumberFormat("en").format(balance)}</h3>
               </div>
             </div>,
           ]}
           dummyCharacters={[
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-1.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-2.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-1.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
             <div className={styles.numbers}>
               <img className={styles.item} src="/Frame-2.png" alt="" />
-              <h3>{randomNumber()}</h3>
+              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
             </div>,
           ]}
         />
