@@ -4,7 +4,8 @@ import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
-import { loadFull } from "tsparticles";
+import { loadSlim } from "tsparticles-slim";
+// import { loadFull } from "tsparticles";
 interface Props {
   children: ReactNode;
 }
@@ -16,8 +17,8 @@ export const Layout: FC<Props> = ({ children }): JSX.Element => {
     // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
-    // await loadSlim(engine);
+    // await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(
