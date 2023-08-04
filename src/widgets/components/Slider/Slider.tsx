@@ -116,6 +116,7 @@ export const Slider: FC = (): JSX.Element => {
               // loop={true}
               // onPlay={() => setIsActive(true)}
               // onPause={() => setIsActive(false)}
+              light={<img src="/slide1.png" alt="light" />}
               fallback={<Loader />}
               url={e.url}
             />
