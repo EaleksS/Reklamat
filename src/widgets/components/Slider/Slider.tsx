@@ -9,8 +9,9 @@ import "./Slider.scss";
 // import required modules
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 import { useBegin } from "../../../store/store";
+import { Loader } from "../../../shared";
 SwiperCore.use([Navigation]);
 
 interface IVideo {
@@ -21,15 +22,15 @@ interface IVideo {
 const video: IVideo[] = [
   {
     id: 1,
-    url: "/video/video_1.mp4",
+    url: "https://www.youtube.com/watch?v=oFgvzyJypk4",
   },
   {
     id: 2,
-    url: "/video/video_2.mp4",
+    url: "https://www.youtube.com/watch?v=h50FdnpOxZA",
   },
   {
     id: 3,
-    url: "/video/video_3.mp4",
+    url: "https://www.youtube.com/watch?v=zsg9MfSitXk",
   },
 ];
 
@@ -112,9 +113,10 @@ export const Slider: FC = (): JSX.Element => {
               playing={begin ? false : activeIndex === index ? true : false}
               controls={false}
               ref={player}
-              loop={true}
+              // loop={true}
               // onPlay={() => setIsActive(true)}
               // onPause={() => setIsActive(false)}
+              fallback={<Loader />}
               url={e.url}
             />
           </SwiperSlide>
