@@ -19,7 +19,7 @@ export const Slots: FC = (): JSX.Element => {
         counterRef2.current?.startAnimation();
         counterRef3.current?.startAnimation();
         counterRef4.current?.startAnimation();
-      }, 400);
+      }, 200);
     }
   }, [begin]);
 
@@ -104,14 +104,14 @@ export const Slots: FC = (): JSX.Element => {
           duration={1.5}
           autoAnimationStart={false}
           startValue={[
-            <div className={styles.numbers}>
+            <div className={`${styles.numbers} ${styles.god}`}>
               <img
                 className={styles.item}
                 style={{ transform: "translateY(-70px)" }}
                 src="/Frame.png"
                 alt=""
               />
-              <h3>{new Intl.NumberFormat("en").format(30000)}</h3>
+              <h3>{new Intl.NumberFormat("en").format(3002)}</h3>
             </div>,
           ]}
           value={[
@@ -157,7 +157,7 @@ export const Slots: FC = (): JSX.Element => {
           autoAnimationStart={false}
           // sequentialAnimationMode
           startValue={[
-            <div className={styles.numbers}>
+            <div className={`${styles.numbers} ${styles.god}`}>
               <img
                 className={styles.item}
                 style={{ transform: "translateY(-70px)" }}
@@ -209,7 +209,7 @@ export const Slots: FC = (): JSX.Element => {
           autoAnimationStart={false}
           duration={2.5}
           startValue={[
-            <div className={styles.numbers}>
+            <div className={`${styles.numbers} ${styles.god}`}>
               <img
                 className={styles.item}
                 style={{ transform: "translateY(-70px)" }}
