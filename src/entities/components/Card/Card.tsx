@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./Card.module.scss";
 import { IoAddOutline } from "react-icons/io5";
+import { Button } from "../../../shared";
 
 interface Props {
   icon: JSX.Element;
@@ -41,9 +42,9 @@ export const Card: FC<Props> = ({
         </h2>
       </div>
       {add && (
-        <button className={styles.add} onClick={onClick}>
+        <Button type="help" onClick={onClick}>
           <IoAddOutline size={20} />
-        </button>
+        </Button>
       )}
     </div>
   );

@@ -14,12 +14,10 @@ export const Slots: FC = (): JSX.Element => {
 
   useEffect(() => {
     if (begin) {
-      setTimeout(() => {
-        counterRef1.current?.startAnimation();
-        counterRef2.current?.startAnimation();
-        counterRef3.current?.startAnimation();
-        counterRef4.current?.startAnimation();
-      }, 200);
+      counterRef1.current?.startAnimation();
+      counterRef2.current?.startAnimation();
+      counterRef3.current?.startAnimation();
+      counterRef4.current?.startAnimation();
     }
   }, [begin]);
 
@@ -38,7 +36,7 @@ export const Slots: FC = (): JSX.Element => {
           charClassName={styles.char}
           valueClassName={styles.value}
           separatorClassName={styles.separ}
-          duration={1}
+          duration={2}
           autoAnimationStart={false}
           // startValueOnce
           // sequentialAnimationMode
@@ -101,7 +99,7 @@ export const Slots: FC = (): JSX.Element => {
           charClassName={styles.char}
           valueClassName={styles.value}
           separatorClassName={styles.separ}
-          duration={1.5}
+          duration={2.5}
           autoAnimationStart={false}
           startValue={[
             <div className={`${styles.numbers} ${styles.god}`}>
@@ -153,7 +151,7 @@ export const Slots: FC = (): JSX.Element => {
           charClassName={styles.char}
           valueClassName={styles.value}
           separatorClassName={styles.separ}
-          duration={2}
+          duration={3}
           autoAnimationStart={false}
           // sequentialAnimationMode
           startValue={[
@@ -207,7 +205,7 @@ export const Slots: FC = (): JSX.Element => {
           valueClassName={styles.value}
           separatorClassName={styles.separ}
           autoAnimationStart={false}
-          duration={2.5}
+          duration={3.5}
           startValue={[
             <div className={`${styles.numbers} ${styles.god}`}>
               <img
